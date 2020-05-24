@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB18030"/>
+    <title>商品列表</title>
+    <link href="css/shopping.css" rel='stylesheet' type='text/css'/>
+    <link href="css/shoplist.css" rel='stylesheet' type='text/css'/>
+    <link rel="start icon" href="images/resize_png_new.png">
+</head>
+
+<body class="body-class">
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <a title="268购物网" href="index.html"><img class="logo1" src="images/logo1.png"/></a>
+        </div>
+        <div class="icon2">
+            <a class="register_user" href="register.html" target="_blank">个人信息</a>
+        </div>
+        <div class="icon1">
+            <a href="cart.html"> <img src="images/bag.png" title="购物车"/></a>
+        </div>
+    </div>
+    <!----------------------------------------------------->
+    <div th:each="good:${goods}">
+        <div class="good">
+            <a class="good-info" th:href="@{details(id=${good.id})}">
+                <div class="picture">
+                    <img th:src="${good.picture}"/>
+                </div>
+                <div class="good-des">
+                    <h4 th:text="${good.info}"></h4>
+                    <h5 class="good-info-h5">限时优惠￥[[${good.price}]]</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!----------------------------------------------------->
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w2.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>2020秋季粉色连衣裙</h4>
+                <h5 class="good-info-h5">限时优惠￥199</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w3.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>2020秋季黄色针织衫</h4>
+                <h5 class="good-info-h5">限时优惠￥299</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w4.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>商务绅士风格白色衬衫</h4>
+                <h5 class="good-info-h5">限时优惠￥799</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w5.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>女神新衣尚雯婕同款</h4>
+                <h5 class="good-info-h5">限时优惠￥699</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w6.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>女神新衣张馨予同款</h4>
+                <h5 class="good-info-h5">限时优惠￥399</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w7.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>女神新衣亲子装儿童款</h4>
+                <h5 class="good-info-h5">限时优惠￥199</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w8.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>时尚五分袖立领短上衣</h4>
+                <h5 class="good-info-h5">限时优惠￥399</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w9.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>2020最新时尚水晶鞋</h4>
+                <h5 class="good-info-h5">限时优惠￥499</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w10.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>伊芙丽中长毛呢外套</h4>
+                <h5 class="good-info-h5">限时优惠￥399</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w11.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>伊芙丽蓝色妮子大衣</h4>
+                <h5 class="good-info-h5">限时优惠￥799</h5>
+            </div>
+        </a>
+    </div>
+
+    <div class="good">
+        <a class="good-info" href="details.html">
+            <div class="picture">
+                <img src="images/w12.jpg"/>
+            </div>
+            <div class="good-des">
+                <h4>女神新衣娜娜套装</h4>
+                <h5 class="good-info-h5">限时优惠￥699</h5>
+            </div>
+        </a>
+    </div>
+</div>
+</body>
+
+</html>

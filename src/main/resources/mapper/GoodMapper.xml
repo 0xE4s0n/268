@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cuit.shop.mapper.GoodMapper">
+
+    <resultMap id="BaseResultMap" type="cuit.shop.entity.Good">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="info" jdbcType="VARCHAR" property="info" />
+        <result column="picture" jdbcType="VARCHAR" property="picture" />
+        <result column="details" jdbcType="VARCHAR" property="details" />
+        <result column="types" jdbcType="VARCHAR" property="types" />
+        <result column="price" jdbcType="INTEGER" property="price" />
+    </resultMap>
+
+    <select id="GoodList" resultType="cuit.shop.entity.Good">
+        select * from t_good;
+    </select>
+
+    <insert id="AddGood" parameterType="cuit.shop.entity.Good">
+        INSERT INTO `t_good` (`id`, `info`, `picture`, `details`, `types`, `price`) VALUES (
+        #{id},#{info},#{picture},#{details},#{types},#{price}
+        );
+    </insert>
+
+    <delete id="DeleteGood" parameterType="java.lang.Integer">
+        delete from t_good where id = #{id}
+    </delete>
+</mapper>
