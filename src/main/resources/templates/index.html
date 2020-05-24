@@ -23,18 +23,16 @@
         </div>
     </div>
     <!----------------------------------------------------->
-    <div th:each="good:${goods}">
-        <div class="good">
-            <a class="good-info" th:href="@{details(id=${good.id})}">
-                <div class="picture">
-                    <img th:src="${good.picture}"/>
-                </div>
-                <div class="good-des">
-                    <h4 th:text="${good.info}"></h4>
-                    <h5 class="good-info-h5">限时优惠￥[[${good.price}]]</h5>
-                </div>
-            </a>
-        </div>
+    <div class="good" th:each="good:${goods}">
+        <a class="good-info" th:href="@{details(id=${good.id})}">
+            <div class="picture">
+                <img th:src="${good.picture}"/>
+            </div>
+            <div class="good-des">
+                <h4 th:text="${good.info}"></h4>
+                <h5 class="good-info-h5">限时优惠￥[[${good.price}]]</h5>
+            </div>
+        </a>
     </div>
 
     <!----------------------------------------------------->
